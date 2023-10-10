@@ -37,9 +37,7 @@ export default function Login({
   async function onSubmit(values: LoginType) {
     try {
       const { data } = await axios.post(
-        `${
-          process.env.NEXT_URL_PUBLIC || 'http://localhost:3000'
-        }/api/user/login`,
+        `https://hadi-confrence.vercel.app//api/user/login`,
         values
       )
       if (data.email) {
