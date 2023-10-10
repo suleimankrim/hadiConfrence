@@ -36,7 +36,12 @@ export default function Login({
   // 2. Define a submit handler.
   async function onSubmit(values: LoginType) {
     try {
-      const { data } = await axios.post(`/api/user/login`, values)
+      const { data } = await axios.post(
+        `${
+          process.env.NEXT_URL_PUBLIC || 'http://localhost:3000'
+        }/api/user/login`,
+        values
+      )
       if (data.email) {
         setOpen(false)
         setCookie('user', `${values.email}+${data.userName}`)

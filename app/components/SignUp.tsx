@@ -21,6 +21,7 @@ import {
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { setCookie } from 'cookies-next'
+import { NEXT } from '@/config'
 
 export default function SignIn({
   setOpen,
@@ -41,7 +42,10 @@ export default function SignIn({
   // 2. Define a submit handler.
   async function onSubmit(values: SingUpType) {
     try {
-      const { data } = await axios.post(`/api/user`, values)
+      const { data } = await axios.post(
+        `${process.env.NEXT_URL_PUBLIC || 'http://localhost:3000'}/api/user`,
+        values
+      )
       if (data.success) {
         setCookie('user', `${values.email}+${values.userName}`)
         setOpen(false)
