@@ -74,7 +74,7 @@ export default function Headers() {
           {!mont ? null : (
             <AlertDialog open={open} onOpenChange={setopen}>
               <AlertDialogTrigger className="text-white text-lg font-bold">
-                {userName ? userName : 'Login/SignIn'}
+                {userName ? userName : 'Login/Signin'}
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogCancel className="absolute top-2 right-4">
@@ -82,7 +82,7 @@ export default function Headers() {
                 </AlertDialogCancel>
                 <AlertDialogHeader>
                   <AlertDialogTitle className="text-center">
-                    {userName ? 'logout' : login ? 'Login' : 'SignIn'}
+                    {userName ? 'logout' : login ? 'Login' : 'Signin'}
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {userName ? (
