@@ -25,8 +25,8 @@ export default function RootLayout({
       className="overflow-x-hidden scrollbar scrollbar-w-2 scrollbar-thumb-sky-600  scrollbar-track-gray-200"
     >
       <body className={inter.className}>
-        <Headers></Headers>
-        {children}
+          <Headers></Headers>
+          {children}
         <Toaster />
       </body>
     </html>

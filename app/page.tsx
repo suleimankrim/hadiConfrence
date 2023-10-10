@@ -5,7 +5,6 @@ import sudi from '@/public/saudiarabia20.jpg'
 import { Separator } from '@/components/ui/separator'
 
 export default async function Home() {
-  const user = await db.user.findMany()
   return (
     <div>
       <h1 className="w-screen mt-6 h-[15px] text-center text-3xl tracking-[2px]">

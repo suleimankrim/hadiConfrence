@@ -14,6 +14,9 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useForm } from 'react-hook-form'
 import { LoginSchema, LoginType } from '../types/user'
+import axios from 'axios'
+import toast from 'react-hot-toast'
+import { setCookie } from 'cookies-next'
 
 export default function Login({
   setOpen,
@@ -32,6 +35,16 @@ export default function Login({
 
   // 2. Define a submit handler.
   async function onSubmit(values: LoginType) {
+    try {
+      const { data } = await axios.post(`/api/user/login`, values)
+      if (data.email) {
+        setOpen(false)
+        setCookie('user', `${values.email}+${data.userName}`)
+        return toast.success('login successfully')
+      } else {
+        return toast.error(data.error)
+      }
+    } catch (e) {}
     setOpen(false)
   }
   return (

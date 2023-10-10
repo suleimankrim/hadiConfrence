@@ -20,6 +20,7 @@ import {
 } from '@/components/ui/alert-dialog'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { setCookie } from 'cookies-next'
 
 export default function SignIn({
   setOpen,
@@ -42,6 +43,7 @@ export default function SignIn({
     try {
       const { data } = await axios.post(`/api/user`, values)
       if (data.success) {
+        setCookie('user', `${values.email}+${values.userName}`)
         setOpen(false)
         return toast.success('User created successfully')
       } else {

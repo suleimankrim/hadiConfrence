@@ -1,24 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import {
-  LoginSchema,
-  LoginType,
-  SignInSchema,
-  SingUpType,
-} from '../../types/user'
+
 import { db } from '@/prisma/db'
+import { LoginSchema, LoginType } from '@/app/types/user'
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
     const body = await req.json()
-    const user: SingUpType = SignInSchema.parse(body)
+    const user: LoginType = LoginSchema.parse(body)
     const userExist = await db.user.findUnique({
       where: { email: user.email },
     })
-    if (userExist) return NextResponse.json({ error: 'User already exist' })
-    const newUser = await db.user.create({
-      data: user,
-    })
-    return NextResponse.json({ success: true })
+    if (!userExist)
+      return NextResponse.json({ error: 'User Not exist please sign in.' })
+    if (user.password !== userExist.password)
+      return NextResponse.json({ error: 'Wrong Credentials' })
+    return NextResponse.json(userExist)
   } catch (e) {
     console.log('====================================')
     console.log(e)
