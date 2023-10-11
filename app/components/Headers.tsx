@@ -45,8 +45,9 @@ export default function Headers() {
           <Image src={'/Group 4.png'} fill alt="logo"></Image>
         </div>
         <div className="flex justify-between items-center gap-10">
-          {word.map((item) => (
+          {word.map((item, idx) => (
             <Link
+              key={idx}
               className={cn(
                 'text-lg font-bold text-black',
                 pathName == `${item.pathName}` ? 'text-xl text-sky-700' : ''
