@@ -19,6 +19,7 @@ import Logout from './Logout'
 import Image from 'next/image'
 import { getCookie } from 'cookies-next'
 import { Separator } from '@/components/ui/separator'
+import { it } from 'node:test'
 export default function Headers() {
   const [open, setopen] = useState(false)
   const [login, setLogin] = useState(true)
@@ -28,68 +29,33 @@ export default function Headers() {
   useEffect(() => {
     setmont(true)
   }, [])
+  const word = [
+    { pathName: '/', name: 'Home' },
+    { pathName: '/about', name: 'About' },
+    { pathName: '/work', name: 'Call for WorkShops' },
+    { pathName: '/sponser', name: 'Call for Sponseres' },
+    { pathName: '/add', name: 'Paper Submission' },
+    { pathName: '/papers', name: 'Call for Papers' },
+  ]
 
   return (
     <>
       <div className="h-24 flex justify-between items-center px-5">
-        <div className="w-[140px] h-[80px] relative font-bold text-white ">
+        <div className="ml-3 w-[130px] h-[70px] relative font-bold text-white ">
           <Image src={'/Group 4.png'} fill alt="logo"></Image>
         </div>
         <div className="flex justify-between items-center gap-10">
-          <Link
-            className={cn(
-              'text-xl font-bold text-black',
-              pathName == '/' ? 'text-2xl underline' : 'text-black'
-            )}
-            href={'/'}
-          >
-            Home
-          </Link>
-          <Link
-            className={cn(
-              'text-xl font-bold text-black',
-              pathName == '/about' ? 'text-2xl underline' : 'v'
-            )}
-            href={'about'}
-          >
-            About
-          </Link>
-          <Link
-            className={cn(
-              'text-xl font-bold text-black',
-              pathName == '/papers' ? 'text-2xl underline' : 'text-black'
-            )}
-            href={'papers'}
-          >
-            Call for Papers
-          </Link>
-          <Link
-            className={cn(
-              'text-xl font-bold text-black',
-              pathName == '/sponser' ? 'text-2xl underline' : 'text-black'
-            )}
-            href={'sponser'}
-          >
-            Call for Sponseres
-          </Link>
-          <Link
-            className={cn(
-              'text-xl font-bold text-black',
-              pathName == '/work' ? 'text-2xl underline' : 'text-black'
-            )}
-            href={'work'}
-          >
-            Call for WorkShops
-          </Link>
-          <Link
-            className={cn(
-              'text-xl font-bold text-black',
-              pathName == '/add' ? 'text-2xl underline' : 'text-black'
-            )}
-            href={'add'}
-          >
-            Add Paper
-          </Link>
+          {word.map((item) => (
+            <Link
+              className={cn(
+                'text-lg font-bold text-black',
+                pathName == `${item.pathName}` ? 'text-xl text-sky-700' : ''
+              )}
+              href={`${item.pathName}`}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
         <div>
           {!mont ? null : (

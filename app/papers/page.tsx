@@ -1,4 +1,6 @@
 import React from 'react'
+import HadiDot from '../components/HadiDot'
+import HadiTitle from '../components/HadiTitle'
 
 export default function page() {
   return (
@@ -13,55 +15,73 @@ export default function page() {
       </p>
       <div className="px-40 my-6 w-full h-full flex gap-6">
         <div className="border rounded-md shadow-lg p-4 flex-1 space-x-1">
-          Authors are invited to submit their original research papers on a wide
-          range of topics related to quantum software engineering, including but
-          not limited to:{' '}
+          <HadiTitle title="Topics of Interest:"></HadiTitle>
           <div className="mt-1">
-            • Quantum algorithms and their practical applications
-          </div>
-          <div>• Quantum programming languages, libraries, and frameworks</div>
-          <div>
-            • Quantum software development methodologies and best practices
-          </div>{' '}
-          <div>• Quantum machine learning and optimization algorithms </div>
-          <div>
-            • Quantum cryptography, security, and post-quantum cryptography{' '}
+            <HadiDot /> Quantum algorithms and their practical applications
           </div>
           <div>
-            • Interdisciplinary research at the intersection of quantum
-            computing and software engineering{' '}
+            {' '}
+            <HadiDot /> Quantum programming languages, libraries, and frameworks
+          </div>
+          <div>
+            <HadiDot /> Quantum software development methodologies and best
+            practices
           </div>{' '}
-          • Quantum hardware and software co-design
-          <div>• Quantum simulation and quantum computing in the cloud</div>
+          <div>
+            {' '}
+            <HadiDot /> Quantum machine learning and optimization algorithms{' '}
+          </div>
+          <div>
+            <HadiDot /> Quantum cryptography, security, and post-quantum
+            cryptography{' '}
+          </div>
+          <div>
+            <HadiDot /> Interdisciplinary research at the intersection of
+            quantum computing and software engineering{' '}
+          </div>{' '}
+          <HadiDot /> Quantum hardware and software co-design
+          <div>
+            {' '}
+            <HadiDot /> Quantum simulation and quantum computing in the cloud
+          </div>
         </div>
         <div className="space-y-3 flex-1 ">
           <div className="border rounded-md shadow-lg p-4">
-            Here are the submission guidelines:
+            <HadiTitle title="Submission Guidelines:"></HadiTitle>
             <div>
-              • Paper Length: Papers should not exceed 20 pages, including
-              figures, tables, and references.
+              <HadiDot /> Paper Length: Papers should not exceed 20 pages,
+              including figures, tables, and references.
             </div>
             <div>
-              • Formatting: Please use the conference template for formatting
-              your paper.
+              <HadiDot /> Formatting: Please use the conference template for
+              formatting your paper.
             </div>
             <div>
               {' '}
-              • Review Process: All submissions will undergo a rigorous
-              peer-review process.
+              <HadiDot /> Review Process: All submissions will undergo a
+              rigorous peer-review process.
             </div>
             <div>
-              • Publication: Accepted papers will be included in the conference
-              proceedings and may be considered for publication in a special
-              issue of a reputable journal.
+              <HadiDot /> Publication: Accepted papers will be included in the
+              conference proceedings and may be considered for publication in a
+              special issue of a reputable journal.
             </div>
           </div>
           <div className="border rounded-md shadow-lg p-4">
             {' '}
-            Important Dates{' '}
-            <div>• Expected Paper Submission Deadline: July 2024</div>{' '}
-            <div>• Expected Notification of Acceptance: September 2024</div>
-            <div> • Expected Conference Dates: December 2024</div>
+            <HadiTitle title="Important Dates:"></HadiTitle>
+            <div>
+              {' '}
+              <HadiDot /> Expected Paper Submission Deadline: July 2024
+            </div>{' '}
+            <div>
+              {' '}
+              <HadiDot /> Expected Notification of Acceptance: September 2024
+            </div>
+            <div>
+              {' '}
+              <HadiDot /> Expected Conference Dates: December 2024
+            </div>
           </div>
         </div>
       </div>
