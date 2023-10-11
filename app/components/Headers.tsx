@@ -16,8 +16,8 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import Logout from './Logout'
+import Image from 'next/image'
 import { getCookie } from 'cookies-next'
-
 export default function Headers() {
   const [open, setopen] = useState(false)
   const [login, setLogin] = useState(true)
@@ -31,8 +31,11 @@ export default function Headers() {
   return (
     <>
       <div className="h-16 bg-sky-500 flex justify-between items-center px-5">
-        <div className="text-4xl font-bold text-white">QSES</div>
-        <div className="flex justify-between items-center gap-32">
+        <div className="w-[180px] h-[120px] "></div>
+        <div className="w-[180px] h-[100px] absolute top-[80px] left-[50px] font-bold text-white ">
+          <Image src={'/Group 4.png'} fill alt="logo"></Image>
+        </div>
+        <div className="flex justify-between items-center gap-10">
           <Link
             className={cn(
               'text-xl font-bold text-white',
@@ -63,18 +66,36 @@ export default function Headers() {
           <Link
             className={cn(
               'text-xl font-bold text-white',
+              pathName == '/sponser' ? 'text-2xl underline' : 'text-white'
+            )}
+            href={'sponser'}
+          >
+            Call for Sponseres
+          </Link>
+          <Link
+            className={cn(
+              'text-xl font-bold text-white',
+              pathName == '/work' ? 'text-2xl underline' : 'text-white'
+            )}
+            href={'work'}
+          >
+            Call for WorkShops
+          </Link>
+          <Link
+            className={cn(
+              'text-xl font-bold text-white',
               pathName == '/add' ? 'text-2xl underline' : 'text-white'
             )}
             href={'add'}
           >
-            About
+            Add Paper
           </Link>
         </div>
         <div>
           {!mont ? null : (
             <AlertDialog open={open} onOpenChange={setopen}>
-              <AlertDialogTrigger className="text-white text-lg font-bold">
-                {userName ? userName : 'Login/Signin'}
+              <AlertDialogTrigger className=" text-base font-bold border bg-white text-sky-600 p-2 rounded">
+                {userName ? userName : 'Login / Sign up'}
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogCancel className="absolute top-2 right-4">

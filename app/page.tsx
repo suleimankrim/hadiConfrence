@@ -1,6 +1,4 @@
-import { db } from '@/prisma/db'
 import Image from 'next/image'
-import Headers from './components/Headers'
 import sudi from '@/public/saudiarabia20.jpg'
 import { Separator } from '@/components/ui/separator'
 
