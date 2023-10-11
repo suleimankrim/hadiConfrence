@@ -18,6 +18,7 @@ import { usePathname } from 'next/navigation'
 import Logout from './Logout'
 import Image from 'next/image'
 import { getCookie } from 'cookies-next'
+import { Separator } from '@/components/ui/separator'
 export default function Headers() {
   const [open, setopen] = useState(false)
   const [login, setLogin] = useState(true)
@@ -30,16 +31,15 @@ export default function Headers() {
 
   return (
     <>
-      <div className="h-16 bg-sky-500 flex justify-between items-center px-5">
-        <div className="w-[180px] h-[120px] "></div>
-        <div className="w-[180px] h-[100px] absolute top-[80px] left-[50px] font-bold text-white ">
+      <div className="h-24 flex justify-between items-center px-5">
+        <div className="w-[140px] h-[80px] relative font-bold text-white ">
           <Image src={'/Group 4.png'} fill alt="logo"></Image>
         </div>
         <div className="flex justify-between items-center gap-10">
           <Link
             className={cn(
-              'text-xl font-bold text-white',
-              pathName == '/' ? 'text-2xl underline' : 'text-white'
+              'text-xl font-bold text-black',
+              pathName == '/' ? 'text-2xl underline' : 'text-black'
             )}
             href={'/'}
           >
@@ -47,8 +47,8 @@ export default function Headers() {
           </Link>
           <Link
             className={cn(
-              'text-xl font-bold text-white',
-              pathName == '/about' ? 'text-2xl underline' : 'text-white'
+              'text-xl font-bold text-black',
+              pathName == '/about' ? 'text-2xl underline' : 'v'
             )}
             href={'about'}
           >
@@ -56,8 +56,8 @@ export default function Headers() {
           </Link>
           <Link
             className={cn(
-              'text-xl font-bold text-white',
-              pathName == '/papers' ? 'text-2xl underline' : 'text-white'
+              'text-xl font-bold text-black',
+              pathName == '/papers' ? 'text-2xl underline' : 'text-black'
             )}
             href={'papers'}
           >
@@ -65,8 +65,8 @@ export default function Headers() {
           </Link>
           <Link
             className={cn(
-              'text-xl font-bold text-white',
-              pathName == '/sponser' ? 'text-2xl underline' : 'text-white'
+              'text-xl font-bold text-black',
+              pathName == '/sponser' ? 'text-2xl underline' : 'text-black'
             )}
             href={'sponser'}
           >
@@ -74,8 +74,8 @@ export default function Headers() {
           </Link>
           <Link
             className={cn(
-              'text-xl font-bold text-white',
-              pathName == '/work' ? 'text-2xl underline' : 'text-white'
+              'text-xl font-bold text-black',
+              pathName == '/work' ? 'text-2xl underline' : 'text-black'
             )}
             href={'work'}
           >
@@ -83,8 +83,8 @@ export default function Headers() {
           </Link>
           <Link
             className={cn(
-              'text-xl font-bold text-white',
-              pathName == '/add' ? 'text-2xl underline' : 'text-white'
+              'text-xl font-bold text-black',
+              pathName == '/add' ? 'text-2xl underline' : 'text-black'
             )}
             href={'add'}
           >
@@ -94,7 +94,11 @@ export default function Headers() {
         <div>
           {!mont ? null : (
             <AlertDialog open={open} onOpenChange={setopen}>
-              <AlertDialogTrigger className=" text-base font-bold border bg-white text-sky-600 p-2 rounded">
+              <AlertDialogTrigger
+                className=" text-base font-bold border bg-white 
+              hover:bg-sky-600 hover:text-white
+              text-sky-600 p-2 rounded"
+              >
                 {userName ? userName : 'Login / Sign up'}
               </AlertDialogTrigger>
               <AlertDialogContent>
@@ -120,6 +124,9 @@ export default function Headers() {
             </AlertDialog>
           )}
         </div>
+      </div>
+      <div className="px-40">
+        <Separator className="bg-blue-800"></Separator>
       </div>
     </>
   )

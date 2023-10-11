@@ -1,12 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Toaster } from 'react-hot-toast'
-import { Poppins } from 'next/font/google'
+import { Tinos } from 'next/font/google'
 import Headers from './components/Headers'
 
-const inter = Poppins({
-  weight: '300',
+const inter = Tinos({
   subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
