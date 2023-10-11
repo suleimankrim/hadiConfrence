@@ -43,7 +43,7 @@ export default function SignIn({
   async function onSubmit(values: SingUpType) {
     try {
       const { data } = await axios.post(
-        `${process.env.NEXT_URL_PUBLIC || 'http://localhost:3000'}/api/user`,
+        `${process.env.NEXT_URL_PUBLIC}/api/user`,
         values
       )
       if (data.success) {
