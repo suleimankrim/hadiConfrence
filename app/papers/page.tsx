@@ -5,7 +5,7 @@ import HadiTitle from '../components/HadiTitle'
 export default function page() {
   return (
     <div>
-      <p className="text-center  text-lg px-40 mt-5">
+      <p className="text-center  text-lg px-12 md:px-40 mt-5">
         We welcome contributions from researchers, academics, and industry
         experts in the fields of quantum computing and software engineering to
         submit their original papers to the Quantum Software Engineering Summit.
@@ -13,7 +13,7 @@ export default function page() {
         research, foster collaboration, and advance the field of quantum
         software engineering.
       </p>
-      <div className="px-40 my-6 w-full h-full flex gap-6">
+      <div className="px-12 md:px-40 my-6 w-full h-full flex gap-6">
         <div className="border rounded-md shadow-lg p-4 flex-1 space-x-1">
           <HadiTitle title="Topics of Interest:"></HadiTitle>
           <div className="mt-1">

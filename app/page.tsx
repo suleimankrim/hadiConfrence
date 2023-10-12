@@ -5,42 +5,41 @@ import { Separator } from '@/components/ui/separator'
 export default async function Home() {
   return (
     <div>
-      <h1 className="w-screen mt-6 h-[15px] text-center text-3xl tracking-[2px]">
-        <span className="text-sky-600 text-4xl">Q</span>uantum{' '}
-        <span className="text-sky-600 text-4xl">S</span>oftware{' '}
-        <span className="text-sky-600 text-4xl">E</span>ngineering{' '}
-        <span className="text-sky-600 text-4xl">S</span>ummit
+      <h1 className="w-screen mt-6 h-[15px] text-center text-xl md:text-3xl tracking-[2px]">
+        <span className="text-sky-600 text-xl md:text-4xl">Q</span>uantum{' '}
+        <span className="text-sky-600 text-xl md:text-4xl">S</span>oftware{' '}
+        <span className="text-sky-600 text-xl md:text-4xl">E</span>ngineering{' '}
+        <span className="text-sky-600 text-xl md:text-4xl">S</span>ummit
       </h1>
-      <h1 className="w-screen mt-8 italic h-[15px] text-gray-600 text-center text-lg">
+      <h1 className="w-screen mt-8 mb-2 italic h-[15px] text-gray-600 text-center text-xs md:text-lg">
         December 2024
-      </h1>
-      <h1 className="w-screen mb-2 h-[15px] text-gray-600 mt-4 italic text-center text-lg">
-        Jeddah, Saudi Arabia
       </h1>
       <div className="relative w-screen mt-6 h-[300px]">
         <Image
           fill
           src={sudi}
           alt="sudi"
-          className="object-cover object-center"
+          className="object-fill object-center"
           priority={true}
           sizes="100vw"
           quality="100"
+          draggable={false}
           placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          //blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         ></Image>
       </div>
-      <h1 className=" text-center text-gray-600 text-lg mt-5 px-28 ">
-        The ”<span className="text-sky-600 text-lg">Q</span>uantum{' '}
-        <span className="text-sky-600 text-lg">S</span>oftware{' '}
-        <span className="text-sky-600 text-lg">E</span>ngineering{' '}
-        <span className="text-sky-600 text-lg">S</span>ummit,” a groundbreaking
-        event aimed at exploring the intersection of software engineering and
-        quantum computing.
+      <h1 className=" text-center text-gray-600 text-base md:text-lg mt-5 px-16 md:px-28 ">
+        The ”<span className="text-sky-600 text-base md:text-lg">Q</span>uantum{' '}
+        <span className="text-sky-600 text-base md:text-lg">E</span>ngineering{' '}
+        <span className="text-sky-600 text-base md:text-lg">S</span>ummit,” a
+        groundbreaking event aimed at exploring the intersection of software
+        engineering and quantum computing.
       </h1>
-      <div className="w-screen px-44 mt-7 mb-14 space-y-4">
+      <div className="w-screen px-20 md:px-44 mt-7 mb-14 space-y-4">
         <Separator className="bg-blue-900"></Separator>
-        <h1 className="text-center text-lg mt-3 text-sky-600 ">Introduction</h1>
+        <h1 className="text-center text-base md:text-lg mt-3 text-sky-600 ">
+          Introduction
+        </h1>
         <p className="text-center">
           The rapidly evolving landscape of quantum computing has ushered in a
           new era of computational possibilities, fundamentally reshaping the
