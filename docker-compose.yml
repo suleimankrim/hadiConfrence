@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nextjs:
+    image: suleiman
+    ports:
+      - '3000:3000'
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    volumes:
+      - /app/node_modules
+      - /app/.next
+    restart: always
+
+  # frontend:
+  #   image: nginx:latest
+  #   volumes:
+  #     - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+  #     - ./nginx/conf.d:/etc/nginx/conf.d
+  #   ports:
+  #     - "80:80"
+  #   depends_on:
+  #     - nextjs
+  #   restart: always
