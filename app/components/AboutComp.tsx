@@ -18,10 +18,10 @@ export default function AboutComp() {
           <ChevronDown />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+          <DropdownMenuItem>Topics</DropdownMenuItem>
+          <DropdownMenuItem>Committees</DropdownMenuItem>
+          <DropdownMenuItem>Important dates</DropdownMenuItem>
+          <DropdownMenuItem>Downloads</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </>

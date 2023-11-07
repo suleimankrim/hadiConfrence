@@ -77,7 +77,7 @@ export default function SignIn({
           name="userName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>UserName:</FormLabel>
+              <FormLabel>User name:</FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -106,10 +106,10 @@ export default function SignIn({
             }}
             className="text-sky-800 cursor-pointer ml-1 text-lg"
           >
-            SignIn
+            Login
           </span>
         </h1>
-        <Button type="submit">Save</Button>
+        <Button type="submit">Sign up</Button>
       </form>
     </Form>
   )

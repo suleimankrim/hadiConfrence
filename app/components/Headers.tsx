@@ -37,7 +37,7 @@ export default function Headers() {
     { pathName: '/about', name: 'About' },
     { pathName: '/work', name: 'Call for Workshops' },
     { pathName: '/sponser', name: 'Call for Sponsores' },
-    { pathName: '/add', name: 'Paper Submission' },
+    //  { pathName: '/add', name: 'Paper Submission' },
     { pathName: '/papers', name: 'Call for Papers' },
   ]
   const screen = useScreenSize()
@@ -52,18 +52,24 @@ export default function Headers() {
           <div className="flex justify-between items-center gap-10">
             {word.map((item, idx) => (
               <div key={idx} className="flex gap-1">
-                <Link
-                  key={idx}
-                  className={cn(
-                    'text-sm md:text-lg font-bold text-black',
-                    pathName == `${item.pathName}`
-                      ? 'text-base md:text-xl text-sky-700'
-                      : ''
-                  )}
-                  href={`${item.pathName}`}
-                >
-                  {item.name}
-                </Link>
+                {item.name !== 'About' ? (
+                  <Link
+                    key={idx}
+                    className={cn(
+                      'text-sm md:text-lg font-bold text-black',
+                      pathName == `${item.pathName}`
+                        ? 'text-base md:text-xl text-sky-700'
+                        : ''
+                    )}
+                    href={`${item.pathName}`}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <div className="text-sm md:text-lg font-bold text-black">
+                    About
+                  </div>
+                )}
                 {item.name === 'About' ? <AboutComp key={idx} /> : null}
               </div>
             ))}
@@ -84,9 +90,9 @@ export default function Headers() {
                   X
                 </AlertDialogCancel>
                 <AlertDialogHeader>
-                  <AlertDialogTitle className="text-center">
-                    {userName ? 'logout' : login ? 'Login' : 'Signin'}
-                  </AlertDialogTitle>
+                  {/* <AlertDialogTitle className="text-center">
+                    {userName ? 'logout' : login ? 'Login' : 'Sign Up'}
+                  </AlertDialogTitle> */}
                   <AlertDialogDescription>
                     {userName ? (
                       <Logout setOpen={setopen}></Logout>

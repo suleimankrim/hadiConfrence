@@ -36,7 +36,7 @@ export default function Login({
   // 2. Define a submit handler.
   async function onSubmit(values: LoginType) {
     try {
-      const url =process.env.NEXT_PUBLIC_URL;
+      const url = process.env.NEXT_PUBLIC_URL
       const { data } = await axios.post(`${url}/api/user/login`, values)
       if (data.email) {
         setOpen(false)
@@ -86,10 +86,10 @@ export default function Login({
             }}
             className="text-sky-800 cursor-pointer ml-1 text-lg"
           >
-            SignIn
+            Sign up
           </span>
         </h1>
-        <Button type="submit">Save</Button>
+        <Button type="submit">Login</Button>
       </form>
     </Form>
   )
