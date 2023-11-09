@@ -14,15 +14,15 @@ export default async function Home() {
           <span className="text-sky-600 text-xl md:text-4xl">E</span>ngineering{' '}
           <span className="text-sky-600 text-xl md:text-4xl">S</span>ummit
         </h1>
-        <h1 className="w-screen mt-8 mb-2 italic h-[15px] text-gray-600 text-center text-xs md:text-lg">
+        <h1 className="w-screen mt-10 sm:mt-8  mb-2 italic h-[15px] text-gray-600 text-center text-xs md:text-lg">
           December 2024
         </h1>
-        <div className="relative w-screen mt-6 h-[300px]">
+        <div className="relative w-[400px] sm:w-screen mt-6 h-[300px]">
           <Image
             fill
             src={sudi}
             alt="sudi"
-            className="object-fill object-center"
+            className="object-cover object-center"
             priority={true}
             sizes="100vw"
             quality="100"
@@ -31,7 +31,7 @@ export default async function Home() {
             //blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
           ></Image>
         </div>
-        <h1 className=" text-center text-gray-600 text-base md:text-lg mt-5 px-16 md:px-28 ">
+        <h1 className=" text-center text-gray-600 text-base md:text-lg mt-5 px-2 md:px-28 ">
           The ”<span className="text-sky-600 text-base md:text-lg">Q</span>
           uantum <span className="text-sky-600 text-base md:text-lg">E</span>
           ngineering{' '}
@@ -39,7 +39,7 @@ export default async function Home() {
           groundbreaking event aimed at exploring the intersection of software
           engineering and quantum computing.
         </h1>
-        <div className="w-screen px-20 md:px-44 mt-7 mb-14 space-y-4">
+        <div className="w-screen px-4 md:px-44 mt-7 mb-14 space-y-4">
           <Separator className="bg-blue-900"></Separator>
           <h1 className="text-center text-base md:text-lg mt-3 text-sky-600 ">
             Introduction
@@ -77,10 +77,10 @@ export default async function Home() {
           <Separator className="bg-blue-900"></Separator>
         </div>
       </div>
-      <div className="px-12 md:px-40 my-6 w-full h-full flex gap-6">
+      <div className="px-12 md:px-40 my-6 w-full h-full sm:flex gap-6">
         <div className="flex-1 space-y-3">
           <div className="border rounded-md shadow-lg p-4 text-justify  space-x-1">
-            <div className="flex justify-center">
+            <div className="sm:flex justify-center">
               <HadiTitle
                 title="Conference
             Overview "
@@ -93,7 +93,7 @@ export default async function Home() {
             converge to shape the future of computation.
           </div>
           <div className="border rounded-md shadow-lg text-justify p-4">
-            <div className="flex justify-center">
+            <div className="sm:flex justify-center">
               <HadiTitle title="Unlocking Quantum Potential"></HadiTitle>
             </div>
             At the core of our summit lies the belief that the potential of
@@ -141,12 +141,13 @@ export default async function Home() {
           usher in a new era of possibilities.
         </div>
       </div>
-      <div className="w-screen px-20 md:px-44 mt-7 mb-14 space-y-4">
+      <div className="w-screen px-4 md:px-44 mt-7 mb-14 space-y-4">
         <Separator className="bg-blue-900"></Separator>
         <div className=" w-full flex flex-col items-center mt-3 font-bold">
           For further information, please contact the General chair: Professor
-          Manuel Mazzara <div>m.mazzara@innopolis.ru</div>
+          Manuel Mazzara
         </div>
+        <div>m.mazzara@innopolis.ru</div>
       </div>
     </>
   )
