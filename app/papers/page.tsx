@@ -13,7 +13,7 @@ export default function page() {
         research, foster collaboration, and advance the field of quantum
         software engineering.
       </p>
-      <div className="px-12 md:px-40 my-6 w-full h-full flex gap-6">
+      <div className="px-12 md:px-40 my-6 w-full h-full sm:flex gap-6">
         <div className="border rounded-md shadow-lg p-4 flex-1 space-x-1">
           <HadiTitle title="Topics of Interest:"></HadiTitle>
           <div className="mt-1">

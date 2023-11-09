@@ -17,7 +17,7 @@ export default function page() {
         organization. Below are the detailed sponsorship packages and
         opportunities available:
       </p>
-      <div className="px-12 md:px-40 my-6 w-full h-full flex gap-6">
+      <div className="px-12 md:px-40 my-6 w-full h-full sm:flex gap-6">
         <div className="flex-1 space-y-3">
           <div className="border rounded-md shadow-lg p-4  space-x-1">
             <HadiTitle title="Diamond Sponsorship:"></HadiTitle> Our highest
@@ -187,7 +187,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="px-40">
+      <div className="px-8 md:px-40">
         <div className="border p-4 text-center shadow-xl rounded mt-3">
           We welcome your organization’s participation in the ”Quantum Software
           Engineering Summit” as a sponsor. Your support not only contributes to

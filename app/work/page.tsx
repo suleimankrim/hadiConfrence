@@ -9,9 +9,9 @@ export default function work() {
         interactive platform for in-depth discussions, skill development, and
         collaborative learning. Submit your workshop proposals today!
       </div>
-      <div className="flex gap-4">
+      <div className="sm:flex gap-4">
         <div className="flex-1">
-          <div className="shadow border rounded p-4 my-2">
+          <div className="shadow-lg border rounded p-4 my-2">
             Choose from two workshop formats: <br />
             Half-Day Workshops <br />
             Ideal for concise and focused discussions. Duration: approximately
@@ -20,12 +20,12 @@ export default function work() {
             Suitable for comprehensive coverage of topics. Duration: full day
             for in-depth exploration.
           </div>{' '}
-          <div className="shadow border rounded p-4 my-2">
+          <div className="shadow-lg border rounded p-4 my-2">
             Submission Format <br />
             Workshop proposals must be submitted in PDF format. Adhere to the
             submission guidelines available on our conference website.
           </div>{' '}
-          <div className="shadow border rounded p-4 my-2">
+          <div className="shadow-lg border rounded p-4 my-2">
             Important Dates <br />
             Workshop Proposal Submission Deadline <br />
             [Insert Deadline] <br />
@@ -36,7 +36,7 @@ export default function work() {
           </div>{' '}
         </div>
         <div className="flex-1">
-          <div className="shadow border rounded p-4 my-2 ">
+          <div className="shadow-lg border rounded p-4 my-2 ">
             Workshop Proposal Content <br />
             Description of the Workshop and Relevant Topics <br />
             Provide a clear and concise overview of the workshops objectives and
@@ -53,7 +53,7 @@ export default function work() {
             Propose a timeline for your workshop, including submission
             deadlines, review dates, and other relevant milestones. <br />
           </div>
-          <div className="shadow border rounded p-4 my-2 ">
+          <div className="shadow-lg border rounded p-4 my-2 ">
             Workshop Publications <br /> Publication of workshop materials will
             be negotiated individually by the workshop chairs. Reach out to the
             workshop chairs for more details regarding publication

@@ -45,7 +45,7 @@ export default function Headers() {
     <>
       <div className="h-16 md:h-24 flex justify-between items-center px-2 md:px-5">
         {screen.width < 700 ? <SmallWordDrag></SmallWordDrag> : null}
-        <div className="ml-3 w-full h-full max-w-[80px] max-h-[40px] md:max-w-[130px] md:max-h-[70px] relative font-bold text-white ">
+        <div className="ml-14 sm:ml-3 w-full h-full max-w-[80px] max-h-[40px] md:max-w-[130px] md:max-h-[70px] relative font-bold text-white ">
           <Image src={'/Group 4.png'} draggable={false} fill alt="logo"></Image>
         </div>
         {screen.width > 700 ? (

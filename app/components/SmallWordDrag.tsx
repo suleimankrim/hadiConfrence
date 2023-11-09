@@ -20,7 +20,7 @@ export default function SmallWordDrag() {
     { pathName: '/about', name: 'About' },
     { pathName: '/work', name: 'Call for Workshops' },
     { pathName: '/sponser', name: 'Call for Sponsores' },
-    { pathName: '/add', name: 'Paper Submission' },
+    // { pathName: '/add', name: 'Paper Submission' },
     { pathName: '/papers', name: 'Call for Papers' },
   ]
   const pathName = usePathname()
