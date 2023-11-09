@@ -7,7 +7,7 @@ import HadiDot from '../components/HadiDot'
 export default function page() {
   return (
     <div className="mb-14">
-      <p className="text-center  text-lg px-12 md:px-40 mt-5">
+      <p className="text-center font-bold px-12 md:px-40 mt-5">
         To ensure the success and impact of the ”Quantum Software Engineering
         Summit,” we are excited to offer a range of sponsorship opportunities
         for organizations and companies that share our vision and are interested
