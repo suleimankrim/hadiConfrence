@@ -39,8 +39,8 @@ export default function work() {
           <div className="shadow border rounded p-4 my-2 ">
             Workshop Proposal Content <br />
             Description of the Workshop and Relevant Topics <br />
-            Provide a clear and concise overview of the workshop's objectives
-            and the topics it will cover. <br />
+            Provide a clear and concise overview of the workshops objectives and
+            the topics it will cover. <br />
             Program Committee (PC) Chairs and PC Members <br />
             Include information about the workshops organizing committee,
             including the chairs and members of the Program Committee. <br />
