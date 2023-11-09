@@ -1,16 +1,19 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Toaster } from 'react-hot-toast'
-import { Tinos } from 'next/font/google'
+import { Tinos, Arima, Noto_Sans_Egyptian_Hieroglyphs } from 'next/font/google'
 import Headers from './components/Headers'
 
-const inter = Tinos({
+// const inter = Tinos({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+//   style: ['normal', 'italic'],
+//   display: 'swap',
+// })
+const inter = Arima({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  display: 'swap',
+  weight: ['400'],
 })
-
 export const metadata: Metadata = {
   title: 'QSES',
   description:
