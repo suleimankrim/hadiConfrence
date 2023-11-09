@@ -42,7 +42,7 @@ export default function work() {
             Provide a clear and concise overview of the workshop's objectives
             and the topics it will cover. <br />
             Program Committee (PC) Chairs and PC Members <br />
-            Include information about the workshop's organizing committee,
+            Include information about the workshops organizing committee,
             including the chairs and members of the Program Committee. <br />
             Publication (if any) <br />
             Indicate any plans for publication and provide details. <br />
