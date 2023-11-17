@@ -144,10 +144,10 @@ export default async function Home() {
       <div className="w-screen px-4 md:px-44 mt-7 mb-14 space-y-4">
         <Separator className="bg-blue-900"></Separator>
         <div className=" w-full flex flex-col items-center mt-3 font-bold">
-          For further information, please contact the General chair: Professor
-          Manuel Mazzara
+          For further information, please contact the General chair:
+          {/*Professor Manuel Mazzara */}
         </div>
-        <div>m.mazzara@innopolis.ru</div>
+        {/* <div>m.mazzara@innopolis.ru</div> */}
       </div>
     </>
   )
